@@ -16,7 +16,7 @@ function Navbar() {
                 <li><a href='#'>Home</a></li>
                 <li><a href='#'>Features</a></li>
                 <li><a href='#'>About</a></li>
-                <li><a href='#'>Sign In</a></li>
+                <li><a href="Form.js">Sign In</a></li>
                 <li><a href='#'>Register</a></li>
             </ul>
         </nav>
