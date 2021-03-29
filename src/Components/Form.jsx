@@ -5,7 +5,11 @@ class Form extends Component {
     render() {
         return (
             <div>
-                Form Component
+                <form>
+                    <input >
+
+                    </input>
+                </form>
             </div>
         )
     }

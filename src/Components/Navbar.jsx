@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import logo from '../images/logo.png';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import About from './About';
+import Feature from './Feature';
+import Form from './Form';
+import Login from './Login';
+
 
 function Navbar() {
 
@@ -13,11 +19,21 @@ function Navbar() {
                 <span className='nav-icon'></span>
             </label>
             <ul className="menu">
-                <li><a href='#'>Home</a></li>
-                <li><a href='#'>Features</a></li>
-                <li><a href='#'>About</a></li>
-                <li><a href="Form.js">Sign In</a></li>
-                <li><a href='#'>Register</a></li>
+                <Router>
+                    <li><Link exact activeClassName="active" to="/">Home</Link></li>
+                    <li><Link activeClassName="active" to="/features">Features</Link></li>
+                    <li><Link activeClassName="active" to="/about">About</Link></li>
+                    <li><Link exact activeClassName="active" to="/login">Login</Link></li>
+                    <li><Link exact activeClassName="active" to="/">Register</Link></li>
+
+                    <Switch>
+
+                        <Route exact path="/about" component={About} />
+                        <Route exact path="/features" component={Feature} />
+                        <Route exact path="/login" component={Login} />
+                        <Route exact path="/register" component={Form} />
+                    </Switch>
+                </Router>
             </ul>
         </nav>
     )

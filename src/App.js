@@ -5,7 +5,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import aboutimages from './images/Frame 19.png';
 import aboutimages1 from './images/download.png';
-
+import { BrowerRouter as Router, Route, } from "react-router-dom"
 
 function App() {
   return (
