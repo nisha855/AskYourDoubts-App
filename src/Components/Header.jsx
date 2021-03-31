@@ -1,10 +1,23 @@
 import React from 'react';
 import Navbar from './Navbar';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import About from './About';
+import Feature from './Feature';
+import Contact from '../pages/Contact';
+import Login from '../pages/Login';
 
 function Header() {
     return (
         <div id="main">
-            <Navbar />
+            <Router>
+                <Navbar />
+                <Switch>
+                    <Route exact path="/about" component={About}></Route>
+                    <Route exact path="/features" component={Feature}></Route>
+                    <Route exact path="/login" component={Login}></Route>
+                    <Route exact path="/contact" component={Contact}></Route>
+                </Switch>
+            </Router>
             <div className="name">
                 <h1><span>Confused??</span></h1>
                 <h1><span>where to start</span></h1>
